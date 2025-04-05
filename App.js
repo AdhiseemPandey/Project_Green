@@ -5,6 +5,8 @@ import Home from "./components/home";
 import { BrowserRouter, Routes, Route } from "react-router";
 import SustainableCalendar from "./components/card_events";
 import NGOsConnect from "./components/card_NGOs_connect";
+import WebinarHolder from "./components/card_webinars";
+import DonateHere from "./components/card_donate";
 function App(){
 
     return(
@@ -14,6 +16,8 @@ function App(){
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/Events" element={<SustainableCalendar></SustainableCalendar>}></Route>
                 <Route path="/NGOsConnect" element={<NGOsConnect></NGOsConnect>}></Route>
+                <Route path="/Webinars" element={<WebinarHolder></WebinarHolder>}></Route>
+                <Route path="/DonateHere" element={<DonateHere></DonateHere>}></Route>
             </Routes>
         </BrowserRouter>
         </>
