@@ -13,7 +13,7 @@ import DonateHere from "./components/card_donate";
 
 
 
-// import AboutPage from "./components/header_aboutus";
+import AboutPage from "./components/header_aboutus";
 import PartnerWith from "./components/header_partnerwithus";
 
 
@@ -29,7 +29,7 @@ function App(){
                 <Route path="/Webinars" element={<WebinarHolder></WebinarHolder>}></Route>
                 <Route path="/DonateHere" element={<DonateHere></DonateHere>}></Route>
 
-                {/* <Route path="/AboutUs" element={<AboutPage></AboutPage>}></Route> */}
+                <Route path="/AboutUs" element={<AboutPage></AboutPage>}></Route>
                 <Route path="/PartnerWithUs" element={<PartnerWith></PartnerWith>}></Route>
 
                 

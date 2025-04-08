@@ -2,7 +2,7 @@
 //second div : search city
 //third div : boxes
 import SustainableCalendar from "./card_events"
-
+import { NavLink } from "react-router-dom";
 export default function Header(){
     return (
         <header className="bg-gradient-to-r from-green-600 to-green-800 font-serif shadow-lg">
@@ -13,11 +13,11 @@ export default function Header(){
                     <img className="w-40 h-auto" src="/earth.jpg" alt="Eco Earth Logo" />
                 </div>
                 <nav className="hidden md:flex items-center space-x-6">
-                    <a href="#" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">About</a>
-                    <a href="#" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">NGOs Connect</a>
-                    <a href="#" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">Partner With Us</a>
-                    <a href="#" className="bg-white text-green-700 hover:bg-green-100 py-2 px-4 rounded-full font-medium transition-colors duration-300">Explore More</a>
-                    <a href="#" className="bg-green-700 text-white hover:bg-green-600 py-2 px-4 rounded-full font-medium transition-colors duration-300 border border-white">Register/Sign In</a>
+                    <NavLink to="#" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">About</NavLink>
+                    <NavLink to="/NGOsConnect" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">NGOs Connect</NavLink>
+                    <NavLink to="/PartnerWithUs" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">Partner With Us</NavLink>
+                    <NavLink to="#" className="bg-white text-green-700 hover:bg-green-100 py-2 px-4 rounded-full font-medium transition-colors duration-300">Explore More</NavLink>
+                    <NavLink to="#" className="bg-green-700 text-white hover:bg-green-600 py-2 px-4 rounded-full font-medium transition-colors duration-300 border border-white">Register/Sign In</NavLink>
                 </nav>
             </div>
 
@@ -62,8 +62,8 @@ export default function Header(){
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     {/* Webinar Card */}
-                    <a 
-                        href="#" 
+                    <NavLink 
+                        to="/Webinars" 
                         className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center p-8 text-center h-64"
                     >
                         <div className="mb-4 bg-green-100 p-4 rounded-full group-hover:bg-green-200 transition-colors duration-300">
@@ -73,11 +73,11 @@ export default function Header(){
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-2">Webinar</h3>
                         <p className="text-gray-600">Join our educational webinars to learn more</p>
-                    </a>
+                    </NavLink>
 
                     {/* NGO Connect Card */}
-                    <a 
-                        href="#" 
+                    <NavLink 
+                        to="/NGOsConnect" 
                         className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center p-8 text-center h-64"
                     >
                         <div className="mb-4 bg-green-100 p-4 rounded-full group-hover:bg-green-200 transition-colors duration-300">
@@ -87,11 +87,11 @@ export default function Header(){
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-2">NGO Connect</h3>
                         <p className="text-gray-600">Connect with NGOs and support their causes</p>
-                    </a>
+                    </NavLink>
 
                     {/* Events Card */}
-                    <a 
-                        href="#" 
+                    <NavLink 
+                        to="/Events" 
                         className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center p-8 text-center h-64"
                     >
                         <div className="mb-4 bg-green-100 p-4 rounded-full group-hover:bg-green-200 transition-colors duration-300">
@@ -101,11 +101,11 @@ export default function Header(){
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-2">Events</h3>
                         <p className="text-gray-600">Discover upcoming community events</p>
-                    </a>
+                    </NavLink>
 
                     {/* Donate Here Card */}
-                    <a 
-                        href="#" 
+                    <NavLink 
+                        to="/DonateHere" 
                         className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center p-8 text-center h-64"
                     >
                         <div className="mb-4 bg-green-100 p-4 rounded-full group-hover:bg-green-200 transition-colors duration-300">
@@ -115,7 +115,7 @@ export default function Header(){
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-2">Donate Here</h3>
                         <p className="text-gray-600">Support our initiatives with your contribution</p>
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </header>
