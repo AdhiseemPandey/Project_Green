@@ -1,5 +1,6 @@
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import { NavLink } from 'react-router';
 
 const data = [
   { name: "NGOs Partnered", value: 40 },
@@ -17,10 +18,10 @@ const PartnerWith = () => {
       <header className="bg-green-300 shadow-lg py-5 px-10 flex justify-between items-center sticky top-0 z-50 w-full">
         <h1 className="text-3xl font-extrabold text-green-900 tracking-wide">🌱 Green India</h1>
         <nav className="space-x-8 text-green-900 font-semibold">
-          <a href="#" className="hover:text-green-600 transition">Home</a>
-          <a href="#" className="hover:text-green-600 transition">About Us</a>
-          <a href="#" className="hover:text-green-600 transition">Projects</a>
-          <a href="#" className="hover:text-green-600 transition">Contact</a>
+          <NavLink to = "/" className="hover:text-green-600 transition">Home</NavLink>
+          <NavLink to = "/AboutUs" className="hover:text-green-600 transition">About Us</NavLink>
+          <NavLink to = "/Projects" className="hover:text-green-600 transition">Projects</NavLink>
+          <NavLink to = "/PartnerWithUs" className="hover:text-green-600 transition">Contact</NavLink>
         </nav>
       </header>
 

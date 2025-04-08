@@ -14,11 +14,11 @@ export default function Header(){
                     <img className="w-40 h-auto" src="/earth.jpg" alt="Eco Earth Logo" />
                 </div>
                 <nav className="hidden md:flex items-center space-x-6">
-                    <NavLink to="#" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">About</NavLink>
+                    <NavLink to="/AboutUs" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">About</NavLink>
                     <NavLink to="/NGOsConnect" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">NGOs Connect</NavLink>
                     <NavLink to="/PartnerWithUs" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">Partner With Us</NavLink>
-                    <NavLink to="#" className="bg-white text-green-700 hover:bg-green-100 py-2 px-4 rounded-full font-medium transition-colors duration-300">Explore More</NavLink>
-                    <NavLink to="#" className="bg-green-700 text-white hover:bg-green-600 py-2 px-4 rounded-full font-medium transition-colors duration-300 border border-white">Register/Sign In</NavLink>
+                    <NavLink to="/ExploreMore" className="bg-white text-green-700 hover:bg-green-100 py-2 px-4 rounded-full font-medium transition-colors duration-300">Explore More</NavLink>
+                    <NavLink to="/SignIn" className="bg-green-700 text-white hover:bg-green-600 py-2 px-4 rounded-full font-medium transition-colors duration-300 border border-white">Register/Sign In</NavLink>
                 </nav>
             </div>
 

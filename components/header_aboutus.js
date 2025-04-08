@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
+
 
 const AboutPage = () => {
   const textContent = {
@@ -18,9 +20,9 @@ const AboutPage = () => {
       <header className="flex justify-between items-center py-6">
         <h1 className="text-2xl font-bold text-green-700">Green India</h1>
         <nav className="space-x-6">
-          <a href="/" className="text-green-700 hover:text-green-900 font-semibold">Home</a>
-          <a href="/ngos-connect" className="text-green-700 hover:text-green-900 font-semibold">NGOs Connect</a>
-          <a href="/partner-with-us" className="text-green-700 hover:text-green-900 font-semibold">Partner With Us</a>
+          <NavLink to ="/" className="text-green-700 hover:text-green-900 font-semibold">Home</NavLink>
+          <NavLink to ="/NGOsConnect" className="text-green-700 hover:text-green-900 font-semibold">NGOs Connect</NavLink>
+          <NavLink to ="/PartnerWithUs" className="text-green-700 hover:text-green-900 font-semibold">Partner With Us</NavLink>
         </nav>
       </header>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router';
 
 const NGOsConnect = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -52,7 +53,10 @@ const NGOsConnect = () => {
       <header className="bg-green-700 text-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
+            {/* main home se link karo */}
+            <NavLink to = "/">
             <span className="text-2xl font-bold">🌍 NGOs Connect</span>
+            </NavLink>
           </div>
           
           {/* Desktop Navigation */}
@@ -333,17 +337,17 @@ const NGOsConnect = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
                 <div className="border rounded-lg p-4 text-center">
                   <div className="bg-gray-200 rounded-full w-24 h-24 mx-auto mb-3"></div>
-                  <h4 className="font-bold">Sarah Johnson</h4>
+                  <h4 className="font-bold">Adhiseem Pandey</h4>
                   <p className="text-gray-600 text-sm">Founder & CEO</p>
                 </div>
                 <div className="border rounded-lg p-4 text-center">
                   <div className="bg-gray-200 rounded-full w-24 h-24 mx-auto mb-3"></div>
-                  <h4 className="font-bold">Michael Chen</h4>
+                  <h4 className="font-bold">Utkarsh Tiwari</h4>
                   <p className="text-gray-600 text-sm">Tech Lead</p>
                 </div>
                 <div className="border rounded-lg p-4 text-center">
                   <div className="bg-gray-200 rounded-full w-24 h-24 mx-auto mb-3"></div>
-                  <h4 className="font-bold">Priya Patel</h4>
+                  <h4 className="font-bold">Amon & Manish</h4>
                   <p className="text-gray-600 text-sm">Community Manager</p>
                 </div>
               </div>
@@ -383,20 +387,22 @@ const NGOsConnect = () => {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+
+                    {/* Footer Nav */}
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Home</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">NGOs Directory</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Events</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">About Us</a></li>
+                <li><NavLink to="/" className="text-gray-400 hover:text-white text-sm">Home</NavLink></li>
+                <li><NavLink to="/NGOsConnect" className="text-gray-400 hover:text-white text-sm">NGOs Directory</NavLink></li>
+                <li><NavLink to="/Events" className="text-gray-400 hover:text-white text-sm">Events</NavLink></li>
+                <li><NavLink to="/AboutPage" className="text-gray-400 hover:text-white text-sm">About Us</NavLink></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">FAQ</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Contact Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Terms of Service</a></li>
+                <li><NavLink to = "/FAQs" className="text-gray-400 hover:text-white text-sm">FAQ</NavLink></li>
+                <li><NavLink to = "/PartnerWithUs"className="text-gray-400 hover:text-white text-sm">Contact Us</NavLink></li>
+                <li><NavLink to = "/PrivacyPolicy" className="text-gray-400 hover:text-white text-sm">Privacy Policy</NavLink></li>
+                <li><NavLink to = "/TermsOfService" className="text-gray-400 hover:text-white text-sm">Terms of Service</NavLink></li>
               </ul>
             </div>
             <div>

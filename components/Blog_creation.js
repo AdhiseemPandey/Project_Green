@@ -88,15 +88,15 @@ export default function BlogCreator() {
   const renderPreview = () => {
     if (!formData.title && !formData.content) {
       return (
-        <div className="flex flex-col items-center justify-center h-64 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
-          <FiFileText className="w-12 h-12 text-gray-400 mb-2" />
-          <p className="text-gray-500 text-center">Your blog preview will appear here.<br />Start typing to see a live preview.</p>
+        <div className="flex flex-col items-center justify-center h-64 bg-green-50 rounded-lg border-2 border-dashed border-green-200">
+          <FiFileText className="w-12 h-12 text-green-400 mb-2" />
+          <p className="text-green-500 text-center">Your blog preview will appear here.<br />Start typing to see a live preview.</p>
         </div>
       );
     }
 
     return (
-      <article className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+      <article className="bg-white p-6 rounded-lg shadow-sm border border-green-200">
         <h3 className="text-2xl font-bold text-gray-800 mb-2">
           {formData.title || 'Untitled Blog Post'}
         </h3>
@@ -133,9 +133,9 @@ export default function BlogCreator() {
         
         {formData.tags && (
           <div className="flex flex-wrap gap-2 items-center">
-            <FiTag className="text-gray-400" />
+            <FiTag className="text-green-400" />
             {formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag).map((tag, i) => (
-              <span key={i} className="px-3 py-1 bg-blue-50 text-blue-600 text-xs rounded-full">
+              <span key={i} className="px-3 py-1 bg-green-50 text-green-600 text-xs rounded-full">
                 {tag}
               </span>
             ))}
@@ -147,11 +147,11 @@ export default function BlogCreator() {
 
   const renderBlogDetail = (blog) => {
     return (
-      <article className="bg-white p-6 rounded-xl shadow-sm">
+      <article className="bg-white p-6 rounded-xl shadow-sm border border-green-200">
         <div className="flex justify-between items-start mb-4">
           <button
             onClick={() => setSelectedBlog(null)}
-            className="flex items-center text-blue-600 hover:text-blue-800"
+            className="flex items-center text-green-600 hover:text-green-800"
           >
             <FiArrowLeft className="mr-1" /> Back to posts
           </button>
@@ -168,7 +168,7 @@ export default function BlogCreator() {
                 setActiveTab('create');
                 setSelectedBlog(null);
               }}
-              className="p-2 text-gray-600 hover:text-blue-600 rounded-full hover:bg-blue-50"
+              className="p-2 text-gray-600 hover:text-green-600 rounded-full hover:bg-green-50"
               title="Edit post"
             >
               <FiEdit2 />
@@ -217,9 +217,9 @@ export default function BlogCreator() {
         
         {blog.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 items-center">
-            <FiTag className="text-gray-400" />
+            <FiTag className="text-green-400" />
             {blog.tags.map((tag, i) => (
-              <span key={i} className="px-3 py-1 bg-blue-50 text-blue-600 text-xs rounded-full">
+              <span key={i} className="px-3 py-1 bg-green-50 text-green-600 text-xs rounded-full">
                 {tag}
               </span>
             ))}
@@ -230,24 +230,24 @@ export default function BlogCreator() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+    <div className="min-h-screen bg-green-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 rounded-xl mb-8 shadow-lg">
+        <header className="bg-gradient-to-r from-green-600 to-emerald-700 text-white p-8 rounded-xl mb-8 shadow-lg">
           <h1 className="text-4xl font-bold mb-2">Blog Creator</h1>
-          <p className="text-blue-100 opacity-90">Create, manage, and publish your content with ease</p>
+          <p className="text-green-100 opacity-90">Create, manage, and publish your content with ease</p>
         </header>
         
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left sidebar - Navigation */}
           <div className="w-full md:w-64 flex-shrink-0">
-            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 sticky top-8">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-green-100 sticky top-8">
               <nav className="space-y-1">
                 <button
                   onClick={() => {
                     setActiveTab('create');
                     setSelectedBlog(null);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'create' ? 'bg-blue-50 text-blue-700 font-medium' : 'hover:bg-gray-50'}`}
+                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'create' ? 'bg-green-50 text-green-700 font-medium' : 'hover:bg-gray-50'}`}
                 >
                   <FiPlus className="mr-3" />
                   Create Post
@@ -257,7 +257,7 @@ export default function BlogCreator() {
                     setActiveTab('preview');
                     setSelectedBlog(null);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'preview' ? 'bg-blue-50 text-blue-700 font-medium' : 'hover:bg-gray-50'}`}
+                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'preview' ? 'bg-green-50 text-green-700 font-medium' : 'hover:bg-gray-50'}`}
                 >
                   <FiEye className="mr-3" />
                   Preview
@@ -267,19 +267,19 @@ export default function BlogCreator() {
                     setActiveTab('published');
                     setSelectedBlog(null);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'published' ? 'bg-blue-50 text-blue-700 font-medium' : 'hover:bg-gray-50'}`}
+                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center ${activeTab === 'published' ? 'bg-green-50 text-green-700 font-medium' : 'hover:bg-gray-50'}`}
                 >
                   <FiFileText className="mr-3" />
                   Published Posts
                 </button>
               </nav>
               
-              <div className="mt-8 pt-4 border-t border-gray-100">
+              <div className="mt-8 pt-4 border-t border-green-100">
                 <h3 className="font-medium text-gray-700 mb-3">Blog Stats</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-500">Total Posts:</span>
-                    <span className="font-medium bg-blue-50 text-blue-600 px-2 py-1 rounded-full">
+                    <span className="font-medium bg-green-50 text-green-600 px-2 py-1 rounded-full">
                       {blogs.length}
                     </span>
                   </div>
@@ -306,8 +306,8 @@ export default function BlogCreator() {
             ) : (
               <>
                 {activeTab === 'create' && (
-                  <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b border-gray-100">
+                  <section className="bg-white p-6 rounded-xl shadow-sm border border-green-100">
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b border-green-100">
                       Create New Post
                     </h2>
                     
@@ -324,7 +324,7 @@ export default function BlogCreator() {
                             value={formData.title}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            className="w-full px-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                             placeholder="Enter blog title"
                           />
                         </div>
@@ -340,7 +340,7 @@ export default function BlogCreator() {
                             value={formData.author}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            className="w-full px-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                             placeholder="Your name"
                           />
                         </div>
@@ -357,7 +357,7 @@ export default function BlogCreator() {
                           value={formData.content}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                           placeholder="Write your blog content here..."
                         ></textarea>
                         <p className="mt-2 text-xs text-gray-500">
@@ -375,7 +375,7 @@ export default function BlogCreator() {
                           name="image"
                           value={formData.image}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                           placeholder="https://example.com/image.jpg"
                         />
                       </div>
@@ -390,7 +390,7 @@ export default function BlogCreator() {
                           name="tags"
                           value={formData.tags}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                           placeholder="technology, web development, design"
                         />
                       </div>
@@ -399,13 +399,13 @@ export default function BlogCreator() {
                         <button
                           type="button"
                           onClick={() => setActiveTab('preview')}
-                          className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                          className="px-6 py-2 border border-green-200 rounded-lg hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                         >
                           Preview
                         </button>
                         <button
                           type="submit"
-                          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                          className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                         >
                           Publish Post
                         </button>
@@ -415,12 +415,12 @@ export default function BlogCreator() {
                 )}
                 
                 {activeTab === 'preview' && (
-                  <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div className="flex justify-between items-center mb-6 pb-2 border-b border-gray-100">
+                  <section className="bg-white p-6 rounded-xl shadow-sm border border-green-100">
+                    <div className="flex justify-between items-center mb-6 pb-2 border-b border-green-100">
                       <h2 className="text-2xl font-semibold text-gray-800">Post Preview</h2>
                       <button
                         onClick={() => setActiveTab('create')}
-                        className="flex items-center text-blue-600 hover:text-blue-800"
+                        className="flex items-center text-green-600 hover:text-green-800"
                       >
                         <FiArrowLeft className="mr-1" /> Back to editor
                       </button>
@@ -429,7 +429,7 @@ export default function BlogCreator() {
                     <div className="mt-6 flex justify-end">
                       <button
                         onClick={() => setActiveTab('published')}
-                        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                       >
                         View All Posts
                       </button>
@@ -438,8 +438,8 @@ export default function BlogCreator() {
                 )}
                 
                 {activeTab === 'published' && (
-                  <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-2 border-b border-gray-100">
+                  <section className="bg-white p-6 rounded-xl shadow-sm border border-green-100">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-2 border-b border-green-100">
                       <h2 className="text-2xl font-semibold text-gray-800 mb-4 sm:mb-0">Published Posts</h2>
                       <div className="w-full sm:w-64 relative">
                         <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -448,14 +448,14 @@ export default function BlogCreator() {
                           placeholder="Search posts..."
                           value={searchTerm}
                           onChange={(e) => setSearchTerm(e.target.value)}
-                          className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                          className="w-full pl-10 pr-4 py-2 border border-green-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
                         />
                       </div>
                     </div>
                     
                     {isLoading ? (
                       <div className="flex justify-center py-12">
-                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
                       </div>
                     ) : filteredBlogs.length === 0 ? (
                       <div className="text-center py-12">
@@ -467,7 +467,7 @@ export default function BlogCreator() {
                             <div className="mt-6">
                               <button
                                 onClick={() => setActiveTab('create')}
-                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                               >
                                 <FiPlus className="-ml-1 mr-2 h-5 w-5" />
                                 New Post
@@ -487,7 +487,7 @@ export default function BlogCreator() {
                         {filteredBlogs.map(blog => (
                           <article 
                             key={blog.id} 
-                            className="bg-gray-50 p-5 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-sm transition-all cursor-pointer"
+                            className="bg-green-50 p-5 rounded-xl border border-green-200 hover:border-green-300 hover:shadow-sm transition-all cursor-pointer"
                             onClick={() => setSelectedBlog(blog)}
                           >
                             <div className="flex justify-between items-start">
@@ -534,7 +534,7 @@ export default function BlogCreator() {
                             {blog.tags.length > 0 && (
                               <div className="flex flex-wrap gap-2">
                                 {blog.tags.map((tag, i) => (
-                                  <span key={i} className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-full">
+                                  <span key={i} className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded-full">
                                     {tag}
                                   </span>
                                 ))}
