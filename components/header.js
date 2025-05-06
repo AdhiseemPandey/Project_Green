@@ -6,12 +6,17 @@ import { NavLink } from "react-router-dom";
 
 export default function Header(){
     return (
-        <header className="bg-gradient-to-r from-green-600 to-green-800 font-serif shadow-lg">
+        <header className="bg-gradient-to-r from-green-200 to-green-400 font-serif shadow-lg">
             
             {/* Top Navigation Bar */}
             <div className="flex justify-between items-center container mx-auto px-4 py-4">
                 <div className="flex items-center">
-                    <img className="w-40 h-auto" src="/earth.jpg" alt="Eco Earth Logo" />
+                <div className="bg-gradient-to-r from-emerald-500 to-green-700 py-12 px-6 rounded-3xl shadow-lg">
+                <h1 className="text-3xl md:text-5xl font-bold text-center  text-white tracking-wide">
+                FootPrints2Future
+                </h1>
+                {/* <img src="ap.png" alt="Logo" className="h-16 w-16 rounded-full shadow-lg" /> */}
+                </div>
                 </div>
                 <nav className="hidden md:flex items-center space-x-6">
                     <NavLink to="/AboutUs" className="text-white hover:text-green-200 transition-colors duration-300 font-medium">About</NavLink>
@@ -24,10 +29,9 @@ export default function Header(){
 
             {/* Hero Section */}
             <div className="relative overflow-hidden py-12 md:py-20">
-                <div className="absolute inset-0 flex justify-between z-0">
-                    <img className="h-full w-auto opacity-20" src="https://www.bing.com/images/search?view=detailV2&ccid=aIlS2QYL&id=0C44EE9BF2DBC70E71CAC76ABE9F8E3158F1240A&thid=OIP.aIlS2QYLsQy06lRkb7dkIgHaGW&mediaurl=https%3a%2f%2fas2.ftcdn.net%2fv2%2fjpg%2f03%2f92%2f48%2f01%2f1000_F_392480192_aL6Gcc3Jo6NoJnvfuX4SdGsTB1HFeiQ4.jpg&exph=857&expw=1000&q=half+earth+green&simid=608042893423226421&FORM=IRPRST&ck=A93CCFE618B11786116C1930E7870B68&selectedIndex=72&itb=0" alt="Decorative leaf" />
-                    <img className="h-full w-auto opacity-20" src="https://www.bing.com/images/search?view=detailV2&ccid=aIlS2QYL&id=0C44EE9BF2DBC70E71CAC76ABE9F8E3158F1240A&thid=OIP.aIlS2QYLsQy06lRkb7dkIgHaGW&mediaurl=https%3a%2f%2fas2.ftcdn.net%2fv2%2fjpg%2f03%2f92%2f48%2f01%2f1000_F_392480192_aL6Gcc3Jo6NoJnvfuX4SdGsTB1HFeiQ4.jpg&exph=857&expw=1000&q=half+earth+green&simid=608042893423226421&FORM=IRPRST&ck=A93CCFE618B11786116C1930E7870B68&selectedIndex=72&itb=0" alt="Decorative leaf" />
-                </div>
+            <div className="absolute inset-0 flex justify-between z-0">
+  
+            </div>
                 
                 <div className="relative container mx-auto px-4 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">

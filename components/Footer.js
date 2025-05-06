@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-br from-green-800 via-green-700 to-green-900 text-white pt-16 pb-8 shadow-2xl overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-green-800 via-green-400 to-green-600 text-white pt-16 pb-8 shadow-2xl overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-green-400 filter blur-3xl"></div>

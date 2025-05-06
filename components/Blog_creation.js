@@ -232,7 +232,7 @@ export default function BlogCreator() {
   return (
     <div className="min-h-screen bg-green-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        <header className="bg-gradient-to-r from-green-600 to-emerald-700 text-white p-8 rounded-xl mb-8 shadow-lg">
+        <header className="bg-gradient-to-r from-green-200 to-emerald-400 text-white p-8 rounded-xl mb-8 shadow-lg">
           <h1 className="text-4xl font-bold mb-2">Blog Creator</h1>
           <p className="text-green-100 opacity-90">Create, manage, and publish your content with ease</p>
         </header>
